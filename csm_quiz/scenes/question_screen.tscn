@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://deyrore4ufuqk"]
+
+[node name="QuestionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 160.0
+offset_top = 110.0
+offset_right = -201.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="Number" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 100
+text = "##"
+vertical_alignment = 1
+
+[node name="Question" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "This is a question?"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Panel" type="Panel" parent="ColorRect/VBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(0, 107.5)
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="Answers_GridContainer" type="GridContainer" parent="ColorRect/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="Button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer A"
+
+[node name="Button2" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer B"
+
+[node name="Button3" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer C"
+
+[node name="Button4" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Answer D"
+
+[node name="Panel" type="Panel" parent="ColorRect/VBoxContainer/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(95, 0)
+layout_mode = 2
+
+[node name="Confirm_Button" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(170, 52.5)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "Confirm"

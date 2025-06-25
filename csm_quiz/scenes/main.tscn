@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://clwygh7oxs6m7"]
+
+[ext_resource type="PackedScene" uid="uid://c1bhi5m51nhgu" path="res://scenes/start_screen.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://deyrore4ufuqk" path="res://scenes/question_screen.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://mj2vfqvrpv6w" path="res://scenes/answer_screen.tscn" id="3_lquwl"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartScreen" parent="." instance=ExtResource("1_h2yge")]
+layout_mode = 1
+
+[node name="QuestionScreen" parent="." instance=ExtResource("2_1bvp3")]
+visible = false
+layout_mode = 1
+
+[node name="AnswerScreen" parent="." instance=ExtResource("3_lquwl")]
+visible = false
+layout_mode = 1
