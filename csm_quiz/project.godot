@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="CSM_Quiz"
+run/main_scene="uid://clwygh7oxs6m7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+QuestionsLoader="*res://scripts/questions_loader.gd"
 
 [rendering]
 
