@@ -22,7 +22,7 @@ func write_question_and_answers() -> void:
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA.text = answer_a
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB.text = answer_b
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC.text = answer_c
-	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD.text= answer_c
+	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD.text = answer_d
 	
 	$ColorRect2/VBoxContainer/RichTextLabel.text = expanded_answer
 	

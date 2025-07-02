@@ -12,9 +12,18 @@
         "question": "this is the question 2 text?",
 		"answer a": "this is an incorrect answer.",
         "answer b": "this is an incorrect answer.",
-        "answer c": "this is the correct answer.",
-        "answer d": "this is an incorrect answer.",
+        "answer c": "this is the correct answer. Repeted?",
+        "answer d": "this is an incorrect answer. DUH",
         "correct answer": 2,
         "expanded answer": "This is an expanded answer to question 2."
+        },
+    "question 3": {
+        "question": "this is the question 3 text?",
+		"answer a": "this is the correct answer.",
+        "answer b": "this is an incorrect answer.",
+        "answer c": "this is an incorrect answer. Repeted again?",
+        "answer d": "this is an incorrect answer. DUH",
+        "correct answer": 0,
+        "expanded answer": "This is an expanded answer to question 3."
         }
 }
