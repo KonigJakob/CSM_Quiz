@@ -57,7 +57,13 @@ func load_question():
 func load_next_question() -> void:
 	if next_question < question_array.size():
 		get_parent().add_child(QuestionsLoader.question_array[QuestionsLoader.next_question])
-		get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
+		if next_question > 0:
+			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		next_question += 1
 	else:
+		get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		questions_ended.emit()
+
+func reset_questions() -> void:
+	next_question = 0
+	correct_answers = 0

@@ -11,5 +11,6 @@ func _on_start_screen_start_button_pressed() -> void:
 	QuestionsLoader.load_next_question()
 	
 func on_questions_ended() -> void:
+	print("questions ended")
 	results_screen.visible = true
 	

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c52fdsmd7dpwa"]
+[gd_scene load_steps=2 format=3 uid="uid://c52fdsmd7dpwa"]
+
+[ext_resource type="Script" uid="uid://dtost3cc1p538" path="res://scripts/results_screen.gd" id="1_fqf1x"]
 
 [node name="ResultsScreen" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_fqf1x")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -70,3 +73,5 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 42
 text = "Home"
+
+[connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]

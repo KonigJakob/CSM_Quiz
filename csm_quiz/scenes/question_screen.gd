@@ -26,8 +26,11 @@ func write_question_and_answers() -> void:
 	
 	$ColorRect2/VBoxContainer/RichTextLabel.text = expanded_answer
 	
-func update_answer_colorrect_position() -> void:
-	$ColorRect2.position = Vector2(0,0)
+func update_answer_colorrect_position(update_to_center: bool) -> void:
+	if update_to_center:
+		$ColorRect2.position = Vector2(0,0)
+	else:
+		$ColorRect2.position = Vector2(get_viewport_rect().size.x,0)
 
 func _on_button_a_button_up() -> void:
 	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
@@ -37,7 +40,7 @@ func _on_button_a_button_up() -> void:
 	else:
 		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
 		$ColorRect2.color = Color.ORANGE_RED
-	update_answer_colorrect_position()
+	update_answer_colorrect_position(true)
 func _on_button_b_button_up() -> void:
 	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB):
 		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
@@ -46,7 +49,7 @@ func _on_button_b_button_up() -> void:
 	else:
 		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
 		$ColorRect2.color = Color.ORANGE_RED
-	update_answer_colorrect_position()
+	update_answer_colorrect_position(true)
 func _on_button_c_button_up() -> void:
 	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC):
 		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
@@ -55,7 +58,7 @@ func _on_button_c_button_up() -> void:
 	else:
 		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
 		$ColorRect2.color = Color.ORANGE_RED
-	update_answer_colorrect_position()
+	update_answer_colorrect_position(true)
 func _on_button_d_button_up() -> void:
 	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD):
 		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
@@ -64,7 +67,9 @@ func _on_button_d_button_up() -> void:
 	else:
 		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
 		$ColorRect2.color = Color.ORANGE_RED
-	update_answer_colorrect_position()
+	update_answer_colorrect_position(true)
 
 func _on_next_button_button_up() -> void:
+	update_answer_colorrect_position(false)
 	QuestionsLoader.load_next_question()
+	
