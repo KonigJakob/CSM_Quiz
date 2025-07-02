@@ -155,7 +155,7 @@ offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 42
-text = "Next"
+text = "NEXT"
 
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA" to="." method="_on_button_a_button_up"]
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB" to="." method="_on_button_b_button_up"]

@@ -1,29 +1,29 @@
 {
     "question 1": {
-        "question": "this is the question 1 text?",
-		"answer a": "this is an incorrect answer.",
-        "answer b": "this is the correct answer.",
-        "answer c": "this is an incorrect answer.",
-        "answer d": "this is an incorrect answer.",
+        "question": "QUESTION1",
+		"answer a": "QUESTION1_A",
+        "answer b": "QUESTION1_B",
+        "answer c": "QUESTION1_C",
+        "answer d": "QUESTION1_D",
         "correct answer": 1,
-        "expanded answer": "This is an expanded answer to question 1."
+        "expanded answer": "QUESTION1_E"
         },
     "question 2": {
-        "question": "this is the question 2 text?",
-		"answer a": "this is an incorrect answer.",
-        "answer b": "this is an incorrect answer.",
-        "answer c": "this is the correct answer. Repeted?",
-        "answer d": "this is an incorrect answer. DUH",
+        "question": "QUESTION2",
+		"answer a": "QUESTION2_A",
+        "answer b": "QUESTION2_B",
+        "answer c": "QUESTION2_C",
+        "answer d": "QUESTION2_D",
         "correct answer": 2,
-        "expanded answer": "This is an expanded answer to question 2."
+        "expanded answer": "QUESTION2_E"
         },
     "question 3": {
-        "question": "this is the question 3 text?",
-		"answer a": "this is the correct answer.",
-        "answer b": "this is an incorrect answer.",
-        "answer c": "this is an incorrect answer. Repeted again?",
-        "answer d": "this is an incorrect answer. DUH",
+        "question": "QUESTION3",
+		"answer a": "QUESTION3_A",
+        "answer b": "QUESTION3_B",
+        "answer c": "QUESTION3_C",
+        "answer d": "QUESTION3_D",
         "correct answer": 0,
-        "expanded answer": "This is an expanded answer to question 3."
+        "expanded answer": "QUESTION3_E"
         }
 }

@@ -34,40 +34,37 @@ func update_answer_colorrect_position(update_to_center: bool) -> void:
 
 func _on_button_a_button_up() -> void:
 	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
-		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
-		$ColorRect2.color = Color.GREEN
-		QuestionsLoader.correct_answers += 1
+		check_for_answer(true)
 	else:
-		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
-		$ColorRect2.color = Color.ORANGE_RED
+		check_for_answer(false)
 	update_answer_colorrect_position(true)
 func _on_button_b_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB):
-		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
-		$ColorRect2.color = Color.GREEN
-		QuestionsLoader.correct_answers += 1
+	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
+		check_for_answer(true)
 	else:
-		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
-		$ColorRect2.color = Color.ORANGE_RED
+		check_for_answer(false)
 	update_answer_colorrect_position(true)
 func _on_button_c_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC):
-		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
-		$ColorRect2.color = Color.GREEN
-		QuestionsLoader.correct_answers += 1
+	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
+		check_for_answer(true)
 	else:
-		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
-		$ColorRect2.color = Color.ORANGE_RED
+		check_for_answer(false)
 	update_answer_colorrect_position(true)
 func _on_button_d_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD):
-		$ColorRect2/VBoxContainer/Answer.text = "Correct!"
+	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
+		check_for_answer(true)
+	else:
+		check_for_answer(false)
+	update_answer_colorrect_position(true)
+
+func check_for_answer(correct : bool) -> void:
+	if correct:
+		$ColorRect2/VBoxContainer/Answer.text = "CORRECT"
 		$ColorRect2.color = Color.GREEN
 		QuestionsLoader.correct_answers += 1
 	else:
-		$ColorRect2/VBoxContainer/Answer.text = "Incorrect!"
+		$ColorRect2/VBoxContainer/Answer.text = "INCORRECT"
 		$ColorRect2.color = Color.ORANGE_RED
-	update_answer_colorrect_position(true)
 
 func _on_next_button_button_up() -> void:
 	update_answer_colorrect_position(false)

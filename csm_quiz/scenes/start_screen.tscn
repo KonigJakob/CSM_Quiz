@@ -34,7 +34,7 @@ offset_bottom = 68.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
-text = "Quiz"
+text = "TITLE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -52,6 +52,33 @@ offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 42
-text = "Start"
+text = "START"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -119.0
+offset_top = -72.0
+offset_right = -27.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+alignment = 1
+
+[node name="DE_Button" type="Button" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "DE"
+
+[node name="EN_Button" type="Button" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "EN"
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]
+[connection signal="button_up" from="ColorRect/HBoxContainer/DE_Button" to="." method="_on_de_button_button_up"]
+[connection signal="button_up" from="ColorRect/HBoxContainer/EN_Button" to="." method="_on_en_button_button_up"]
