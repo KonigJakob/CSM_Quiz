@@ -33,38 +33,28 @@ func update_answer_colorrect_position(update_to_center: bool) -> void:
 		$ColorRect2.position = Vector2(get_viewport_rect().size.x,0)
 
 func _on_button_a_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
-		check_for_answer(true)
-	else:
-		check_for_answer(false)
+	check_for_answer(0)
 	update_answer_colorrect_position(true)
 func _on_button_b_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
-		check_for_answer(true)
-	else:
-		check_for_answer(false)
+	check_for_answer(1)
 	update_answer_colorrect_position(true)
 func _on_button_c_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
-		check_for_answer(true)
-	else:
-		check_for_answer(false)
+	check_for_answer(2)
 	update_answer_colorrect_position(true)
 func _on_button_d_button_up() -> void:
-	if correct_answer == answer_buttons.find($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA):
-		check_for_answer(true)
-	else:
-		check_for_answer(false)
+	check_for_answer(3)
 	update_answer_colorrect_position(true)
 
-func check_for_answer(correct : bool) -> void:
-	if correct:
+func check_for_answer(answer : int) -> void:
+	if answer == correct_answer:
 		$ColorRect2/VBoxContainer/Answer.text = "CORRECT"
 		$ColorRect2.color = Color.GREEN
 		QuestionsLoader.correct_answers += 1
+		EventManager.question_answered.emit(true)
 	else:
 		$ColorRect2/VBoxContainer/Answer.text = "INCORRECT"
 		$ColorRect2.color = Color.ORANGE_RED
+		EventManager.question_answered.emit(false)
 
 func _on_next_button_button_up() -> void:
 	update_answer_colorrect_position(false)

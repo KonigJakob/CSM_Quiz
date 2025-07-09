@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 QuestionsLoader="*res://scripts/questions_loader.gd"
+EventManager="*res://scripts/event_manager.gd"
 
 [internationalization]
 
