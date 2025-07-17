@@ -20,9 +20,13 @@ config/icon="res://icon.svg"
 QuestionsLoader="*res://scripts/questions_loader.gd"
 EventManager="*res://scripts/event_manager.gd"
 
+[gui]
+
+theme/custom_font="uid://dynjhll66nqo4"
+
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/translations.de.translation", "res://assets/translations.en.translation")
+locale/translations=PackedStringArray("res://assets/translations.de.translation", "res://assets/translations.en.translation", "res://assets/translations.fr.translation")
 
 [rendering]
 

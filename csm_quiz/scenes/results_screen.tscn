@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c52fdsmd7dpwa"]
+[gd_scene load_steps=3 format=3 uid="uid://c52fdsmd7dpwa"]
 
 [ext_resource type="Script" uid="uid://dtost3cc1p538" path="res://scripts/results_screen.gd" id="1_fqf1x"]
+[ext_resource type="FontFile" uid="uid://c1egqkp8ldbgq" path="res://assets/Fonts/Atkinson-Hyperlegible-Bold-102.ttf" id="2_j5vbe"]
 
 [node name="ResultsScreen" type="Control"]
 layout_mode = 3
@@ -18,10 +19,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 1, 1)
+color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="ColorRect"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -34,13 +34,13 @@ offset_right = 175.0
 offset_bottom = -94.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_j5vbe")
 theme_override_font_sizes/font_size = 100
-text = "Results"
+text = "RESULTS"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label" type="Label" parent="ColorRect/Label"]
-modulate = Color(0, 0, 0, 1)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -72,6 +72,6 @@ offset_bottom = -65.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_font_sizes/font_size = 42
-text = "Home"
+text = "HOME"
 
 [connection signal="button_up" from="ColorRect/Button" to="." method="_on_button_button_up"]

@@ -9,6 +9,7 @@ var answer_c : String
 var answer_d : String
 var correct_answer : int
 var expanded_answer : String
+var question_number : int
 
 func _ready() -> void:
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA)
@@ -18,6 +19,7 @@ func _ready() -> void:
 
 func write_question_and_answers() -> void:
 	$ColorRect/VBoxContainer/HBoxContainer2/Question.text = question
+	$ColorRect/VBoxContainer/HBoxContainer2/Control/Number.text = str(question_number)
 
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA.text = answer_a
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB.text = answer_b
@@ -48,12 +50,12 @@ func _on_button_d_button_up() -> void:
 func check_for_answer(answer : int) -> void:
 	if answer == correct_answer:
 		$ColorRect2/VBoxContainer/Answer.text = "CORRECT"
-		$ColorRect2.color = Color.GREEN
+		$ColorRect2/VBoxContainer/Answer.add_theme_color_override("font_color", Color(0.224, 0.403, 0.195))
 		QuestionsLoader.correct_answers += 1
 		EventManager.question_answered.emit(true)
 	else:
 		$ColorRect2/VBoxContainer/Answer.text = "INCORRECT"
-		$ColorRect2.color = Color.ORANGE_RED
+		$ColorRect2/VBoxContainer/Answer.add_theme_color_override("font_color", Color(0.502, 0.092, 0.135))
 		EventManager.question_answered.emit(false)
 
 func _on_next_button_button_up() -> void:

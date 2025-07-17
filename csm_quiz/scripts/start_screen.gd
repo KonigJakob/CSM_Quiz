@@ -10,3 +10,6 @@ func _on_de_button_button_up() -> void:
 
 func _on_en_button_button_up() -> void:
 	TranslationServer.set_locale("en")
+
+func _on_fr_button_button_up() -> void:
+	TranslationServer.set_locale("fr")

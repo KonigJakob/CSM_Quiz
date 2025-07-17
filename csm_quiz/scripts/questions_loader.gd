@@ -18,6 +18,7 @@ func _ready() -> void:
 func load_questions() -> Array:
 	var questions
 	var loaded_questions = []
+	var q_int : int = 1
 	if QuestionsLoader.load_question():
 		questions = QuestionsLoader.load_question()
 		for q in questions:
@@ -29,12 +30,12 @@ func load_questions() -> Array:
 			_question_screen.answer_d = questions[q]["answer d"]
 			_question_screen.correct_answer = questions[q]["correct answer"]
 			_question_screen.expanded_answer = questions[q]["expanded answer"]
+			_question_screen.question_number = q_int
+			q_int += 1
 			_question_screen.write_question_and_answers()
 			loaded_questions.append(_question_screen)
-			##QuestionsLoader.number_of_questions += 1
 	else:
 		print("Couldn't load questions.")
-	print(number_of_questions)
 	return loaded_questions
 	
 func load_question():
