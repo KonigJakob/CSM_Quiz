@@ -44,11 +44,14 @@ vertical_alignment = 1
 
 [node name="Question" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2"]
 modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(655, 200)
 layout_mode = 2
+size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 42
 text = "This is a question?"
 horizontal_alignment = 2
 vertical_alignment = 2
+autowrap_mode = 3
 
 [node name="Panel" type="Panel" parent="ColorRect/VBoxContainer"]
 modulate = Color(1, 1, 1, 0)
@@ -63,27 +66,30 @@ alignment = 1
 [node name="Answers_GridContainer" type="GridContainer" parent="ColorRect/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-columns = 2
 
 [node name="ButtonA" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Answer A"
+autowrap_mode = 3
 
 [node name="ButtonB" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Answer B"
+autowrap_mode = 3
 
 [node name="ButtonC" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Answer C"
+autowrap_mode = 3
 
 [node name="ButtonD" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
