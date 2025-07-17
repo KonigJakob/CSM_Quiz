@@ -9,7 +9,6 @@ func _ready() -> void:
 	
 func on_question_answered(_correct : bool) -> void:
 	progress_bar.value += progress_bar.step
-	print (progress_bar.value)
 	pass
 
 func on_questions_ended() -> void:
