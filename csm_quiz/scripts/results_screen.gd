@@ -18,13 +18,17 @@ func show_results(total_correct: int) -> void:
 	# Create and configure the tween
 	var tween = create_tween()
 	tween.set_parallel(true)
-	tween.tween_method(_update_displayed_score, 0, total_correct, 1.0)\
-	.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUINT)
-	tween.tween_property($ColorRect/Label/Label, "scale", Vector2(1.5,1.5), animation_speed)\
-	.set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_QUINT)
+	tween.tween_method(_update_displayed_score, 0, total_correct, animation_speed)
 	tween.set_parallel(false)
-	tween.tween_property($ColorRect/Label/Label, "scale", Vector2(1,1), animation_speed/2)\
-	.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_QUINT)
+	tween.tween_property($ColorRect/Label/Label, "scale", Vector2(2.5,2.5), 0)
+	tween.set_parallel(false)
+	tween.tween_callback(call_chromatic_aberration)
+	tween.set_parallel(false)
+	tween.tween_property($ColorRect/Label/Label, "scale", Vector2(1.5,1.5), 0).set_delay(1)
+	
+
+func call_chromatic_aberration() -> void:
+	EventManager.add_chromatic_aberration()
 
 func _update_displayed_score(value: int):
 	displayed_results = value

@@ -12,6 +12,8 @@ var next_question : int = 0
 
 var correct_answers : int = 0
 
+var questions_are_on : bool = false
+
 func _ready() -> void:
 	question_array = load_questions()
 	
@@ -58,12 +60,15 @@ func load_question():
 		
 func load_next_question() -> void:
 	if next_question < question_array.size():
+		questions_are_on = true
+		EventManager.dither_screen()
 		get_parent().add_child(QuestionsLoader.question_array[QuestionsLoader.next_question])
 		if next_question > 0:
 			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		next_question += 1
 	else:
 		get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
+		questions_are_on = false
 		questions_ended.emit()
 
 func reset_questions() -> void:

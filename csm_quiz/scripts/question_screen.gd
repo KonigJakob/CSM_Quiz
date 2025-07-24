@@ -36,15 +36,19 @@ func update_answer_colorrect_position(update_to_center: bool) -> void:
 
 func _on_button_a_button_up() -> void:
 	check_for_answer(0)
+	EventManager.dither_screen()
 	update_answer_colorrect_position(true)
 func _on_button_b_button_up() -> void:
 	check_for_answer(1)
+	EventManager.dither_screen()
 	update_answer_colorrect_position(true)
 func _on_button_c_button_up() -> void:
 	check_for_answer(2)
+	EventManager.dither_screen()
 	update_answer_colorrect_position(true)
 func _on_button_d_button_up() -> void:
 	check_for_answer(3)
+	EventManager.dither_screen()
 	update_answer_colorrect_position(true)
 
 func check_for_answer(answer : int) -> void:
