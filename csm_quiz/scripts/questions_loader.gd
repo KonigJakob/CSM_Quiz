@@ -1,6 +1,7 @@
 extends Node
 
 signal questions_ended
+signal questions_reloaded
 
 var question_screen = preload("res://scenes/question_screen.tscn")
 
@@ -29,7 +30,6 @@ func load_questions() -> Array:
 			_question_screen.answer_a = questions[q]["answer a"]
 			_question_screen.answer_b = questions[q]["answer b"]
 			_question_screen.answer_c = questions[q]["answer c"]
-			_question_screen.answer_d = questions[q]["answer d"]
 			_question_screen.correct_answer = questions[q]["correct answer"]
 			_question_screen.expanded_answer = questions[q]["expanded answer"]
 			_question_screen.question_number = q_int
@@ -74,3 +74,4 @@ func load_next_question() -> void:
 func reset_questions() -> void:
 	next_question = 0
 	correct_answers = 0
+	questions_reloaded.emit()
