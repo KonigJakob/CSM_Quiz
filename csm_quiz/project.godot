@@ -36,7 +36,8 @@ theme/custom_font="uid://dynjhll66nqo4"
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/translations.de.translation", "res://assets/translations.en.translation", "res://assets/translations.fr.translation")
+locale/translations=PackedStringArray("res://assets/Translations/translations.de.translation", "res://assets/Translations/translations.en.translation", "res://assets/Translations/translations.fr.translation")
+locale/fallback="de"
 
 [rendering]
 
