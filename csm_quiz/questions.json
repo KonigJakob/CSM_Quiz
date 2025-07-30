@@ -4,7 +4,6 @@
 		"answer a": "QUESTION1_A",
         "answer b": "QUESTION1_B",
         "answer c": "QUESTION1_C",
-        "answer d": "QUESTION1_D",
         "correct answer": 1,
         "expanded answer": "QUESTION1_E"
         },
@@ -13,7 +12,6 @@
 		"answer a": "QUESTION2_A",
         "answer b": "QUESTION2_B",
         "answer c": "QUESTION2_C",
-        "answer d": "QUESTION2_D",
         "correct answer": 2,
         "expanded answer": "QUESTION2_E"
         },
@@ -22,7 +20,6 @@
 		"answer a": "QUESTION3_A",
         "answer b": "QUESTION3_B",
         "answer c": "QUESTION3_C",
-        "answer d": "QUESTION3_D",
         "correct answer": 0,
         "expanded answer": "QUESTION3_E"
         },
@@ -31,7 +28,6 @@
 		"answer a": "QUESTION4_A",
         "answer b": "QUESTION4_B",
         "answer c": "QUESTION4_C",
-        "answer d": "QUESTION4_D",
         "correct answer": 2,
         "expanded answer": "QUESTION4_E"
         },
@@ -40,7 +36,6 @@
 		"answer a": "QUESTION5_A",
         "answer b": "QUESTION5_B",
         "answer c": "QUESTION5_C",
-        "answer d": "QUESTION5_D",
         "correct answer": 0,
         "expanded answer": "QUESTION5_E"
         },
@@ -49,7 +44,6 @@
 		"answer a": "QUESTION6_A",
         "answer b": "QUESTION6_B",
         "answer c": "QUESTION6_C",
-        "answer d": "QUESTION6_D",
         "correct answer": 0,
         "expanded answer": "QUESTION6_E"
         }
