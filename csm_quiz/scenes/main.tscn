@@ -32,7 +32,7 @@ wait_time = 10.0
 autostart = true
 
 [node name="AutoExitTimer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 90.0
 autostart = true
 
 [connection signal="start_button_pressed" from="StartScreen" to="." method="_on_start_screen_start_button_pressed"]

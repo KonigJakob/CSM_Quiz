@@ -74,4 +74,7 @@ func load_next_question() -> void:
 func reset_questions() -> void:
 	next_question = 0
 	correct_answers = 0
+	for q in question_array:
+		q.queue_free()
+	question_array = load_questions()
 	questions_reloaded.emit()

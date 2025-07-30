@@ -1,5 +1,7 @@
 extends Control
 
+@onready var exit_button = $Button
+
 var answer_buttons = []
 
 var question : String
@@ -65,4 +67,6 @@ func check_for_answer(answer : int) -> void:
 func _on_next_button_button_up() -> void:
 	update_answer_colorrect_position(false)
 	QuestionsLoader.load_next_question()
-	
+
+func _on_exit_button_button_up() -> void:
+	QuestionsLoader.reset_questions()

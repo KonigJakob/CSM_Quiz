@@ -10,6 +10,7 @@ func _ready() -> void:
 	correct_answers_label = $ColorRect/Label/Label
 	home_button = $ColorRect/Button
 	QuestionsLoader.questions_ended.connect(on_questions_ended)
+	QuestionsLoader.questions_reloaded.connect(_on_questions_reloaded)
 
 func show_results(total_correct: int) -> void:
 	displayed_results = 0
@@ -39,4 +40,7 @@ func on_questions_ended() -> void:
 
 func _on_button_button_up() -> void:
 	QuestionsLoader.reset_questions()
+	visible = false
+
+func _on_questions_reloaded() -> void:
 	visible = false

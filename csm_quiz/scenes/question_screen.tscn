@@ -271,8 +271,22 @@ grow_vertical = 0
 theme_override_font_sizes/font_size = 42
 text = "NEXT"
 
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -101.0
+offset_top = 39.0
+offset_right = -41.0
+offset_bottom = 95.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 45
+text = "X"
+
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA" to="." method="_on_button_a_button_up"]
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB" to="." method="_on_button_b_button_up"]
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC" to="." method="_on_button_c_button_up"]
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD" to="." method="_on_button_d_button_up"]
 [connection signal="button_up" from="ColorRect2/Next_Button" to="." method="_on_next_button_button_up"]
+[connection signal="button_up" from="Button" to="." method="_on_exit_button_button_up"]
