@@ -35,6 +35,8 @@ autostart = true
 wait_time = 120.0
 autostart = true
 
+[node name="Node" type="Node" parent="."]
+
 [connection signal="start_button_pressed" from="StartScreen" to="." method="_on_start_screen_start_button_pressed"]
 [connection signal="timeout" from="EffectTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AutoExitTimer" to="." method="_on_auto_exit_timer_timeout"]
