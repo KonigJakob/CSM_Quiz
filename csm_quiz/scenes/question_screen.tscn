@@ -195,13 +195,6 @@ theme_override_font_sizes/font_size = 27
 text = "Answer C"
 autowrap_mode = 3
 
-[node name="ButtonD" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-text = "Answer D"
-
 [node name="ColorRect2" type="ColorRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
@@ -287,6 +280,5 @@ text = "X"
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA" to="." method="_on_button_a_button_up"]
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB" to="." method="_on_button_b_button_up"]
 [connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC" to="." method="_on_button_c_button_up"]
-[connection signal="button_up" from="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD" to="." method="_on_button_d_button_up"]
 [connection signal="button_up" from="ColorRect2/Next_Button" to="." method="_on_next_button_button_up"]
 [connection signal="button_up" from="Button" to="." method="_on_exit_button_button_up"]

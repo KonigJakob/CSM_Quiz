@@ -2,6 +2,7 @@ extends Control
 
 @onready var exit_button = $Button
 
+var answer_container : Node
 var answer_buttons = []
 
 var question : String
@@ -14,10 +15,13 @@ var expanded_answer : String
 var question_number : int
 
 func _ready() -> void:
+	answer_container = $ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer
+	
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA)
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB)
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC)
-	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD)
+	
+	shuffle_buttons()
 
 func write_question_and_answers() -> void:
 	$ColorRect/VBoxContainer/HBoxContainer2/Question.text = question
@@ -26,9 +30,14 @@ func write_question_and_answers() -> void:
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA.text = answer_a
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB.text = answer_b
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC.text = answer_c
-	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonD.text = answer_d
 	
 	$ColorRect2/VBoxContainer/RichTextLabel.text = expanded_answer
+	
+func shuffle_buttons() -> void:
+	var rng = RandomNumberGenerator.new()
+	for i in answer_buttons.size():
+		answer_container.move_child(answer_buttons[i], rng.randi_range(0,answer_buttons.size()-1))
+	pass
 	
 func update_answer_colorrect_position(update_to_center: bool) -> void:
 	if update_to_center:

@@ -32,12 +32,13 @@ func load_questions() -> Array:
 			_question_screen.answer_c = questions[q]["answer c"]
 			_question_screen.correct_answer = questions[q]["correct answer"]
 			_question_screen.expanded_answer = questions[q]["expanded answer"]
-			_question_screen.question_number = q_int
-			q_int += 1
+			#_question_screen.question_number = q_int
+			#q_int += 1
 			_question_screen.write_question_and_answers()
 			loaded_questions.append(_question_screen)
 	else:
 		print("Couldn't load questions.")
+	loaded_questions.shuffle()
 	return loaded_questions
 	
 func load_question():
