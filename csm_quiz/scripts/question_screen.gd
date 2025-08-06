@@ -11,6 +11,7 @@ var answer_b : String
 var answer_c : String
 var answer_d : String
 var correct_answer : int
+var correct_answer_text : String
 var expanded_answer : String
 var question_number : int
 
@@ -21,17 +22,29 @@ func _ready() -> void:
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB)
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC)
 	
+	match correct_answer:
+		0:
+			correct_answer_text = answer_a
+		1:
+			correct_answer_text = answer_b
+		2:
+			correct_answer_text = answer_c
+	
+	$ColorRect2/VBoxContainer/CorrectAnswer.text = correct_answer_text
 	shuffle_buttons()
 
 func write_question_and_answers() -> void:
 	$ColorRect/VBoxContainer/HBoxContainer2/Question.text = question
-	$ColorRect/VBoxContainer/HBoxContainer2/Control/Number.text = str(question_number)
 
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA.text = answer_a
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB.text = answer_b
 	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC.text = answer_c
 	
 	$ColorRect2/VBoxContainer/RichTextLabel.text = expanded_answer
+
+func update_question_number(q_number : int) -> void:
+	$ColorRect/VBoxContainer/HBoxContainer2/Control/Number.text = str(q_number)
+	pass
 	
 func shuffle_buttons() -> void:
 	var rng = RandomNumberGenerator.new()

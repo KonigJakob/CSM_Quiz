@@ -21,7 +21,6 @@ func _ready() -> void:
 func load_questions() -> Array:
 	var questions
 	var loaded_questions = []
-	var q_int : int = 1
 	if QuestionsLoader.load_question():
 		questions = QuestionsLoader.load_question()
 		for q in questions:
@@ -32,8 +31,6 @@ func load_questions() -> Array:
 			_question_screen.answer_c = questions[q]["answer c"]
 			_question_screen.correct_answer = questions[q]["correct answer"]
 			_question_screen.expanded_answer = questions[q]["expanded answer"]
-			#_question_screen.question_number = q_int
-			#q_int += 1
 			_question_screen.write_question_and_answers()
 			loaded_questions.append(_question_screen)
 	else:
@@ -64,6 +61,7 @@ func load_next_question() -> void:
 		questions_are_on = true
 		EventManager.dither_screen()
 		get_parent().add_child(QuestionsLoader.question_array[QuestionsLoader.next_question])
+		question_array[QuestionsLoader.next_question].update_question_number(next_question +1)
 		if next_question > 0:
 			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		next_question += 1

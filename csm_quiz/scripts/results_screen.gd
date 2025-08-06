@@ -24,8 +24,9 @@ func show_results(total_correct: int) -> void:
 	tween.tween_property($ColorRect/Label/Label, "scale", Vector2(2.5,2.5), 0)
 	tween.set_parallel(false)
 	tween.tween_callback(call_chromatic_aberration)
-	tween.set_parallel(false)
+	tween.set_parallel(true)
 	tween.tween_property($ColorRect/Label/Label, "scale", Vector2(1.5,1.5), 0).set_delay(1)
+	tween.tween_property($ColorRect/Label/Label, "text", str(total_correct) + "/" + str(QuestionsLoader.question_array.size()), 0)
 	
 
 func call_chromatic_aberration() -> void:

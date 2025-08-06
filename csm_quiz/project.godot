@@ -21,6 +21,10 @@ QuestionsLoader="*res://scripts/questions_loader.gd"
 EventManager="*res://scripts/event_manager.gd"
 flowerwall_crt="*res://addons/flowerwall_postprocess/scenes/flowerwall_pp.tscn"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [display]
 
 window/size/viewport_width=1024
