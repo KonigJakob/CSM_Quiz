@@ -91,4 +91,5 @@ func _on_next_button_button_up() -> void:
 	QuestionsLoader.load_next_question()
 
 func _on_exit_button_button_up() -> void:
+	EventManager.dither_screen()
 	QuestionsLoader.reset_questions()

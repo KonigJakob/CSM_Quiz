@@ -40,6 +40,7 @@ func on_questions_ended() -> void:
 	show_results(QuestionsLoader.correct_answers)
 
 func _on_button_button_up() -> void:
+	EventManager.dither_screen()
 	QuestionsLoader.reset_questions()
 	visible = false
 
