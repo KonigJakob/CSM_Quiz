@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://clwygh7oxs6m7"]
+[gd_scene load_steps=7 format=3 uid="uid://clwygh7oxs6m7"]
 
 [ext_resource type="PackedScene" uid="uid://c1bhi5m51nhgu" path="res://scenes/start_screen.tscn" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://jmklyvm3klyd" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c52fdsmd7dpwa" path="res://scenes/results_screen.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://8nykgh40kkre" path="res://scenes/progress_bar.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://c2o6ehywdugq8" path="res://scripts/quiz_manager.gd" id="5_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://7uoxurgay0e" path="res://assets/Textures/Eye_Texture.png" id="6_tefeu"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -25,6 +26,13 @@ layout_mode = 1
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 10
 
+[node name="Accessibility" type="TextureButton" parent="CanvasLayer"]
+offset_left = 33.0
+offset_top = 32.0
+offset_right = 133.0
+offset_bottom = 132.0
+texture_normal = ExtResource("6_tefeu")
+
 [node name="ProgressBar" parent="CanvasLayer" instance=ExtResource("4_jyhfs")]
 visible = false
 
@@ -40,5 +48,6 @@ autostart = true
 script = ExtResource("5_tbgi4")
 
 [connection signal="start_button_pressed" from="StartScreen" to="." method="_on_start_screen_start_button_pressed"]
+[connection signal="button_up" from="CanvasLayer/Accessibility" to="." method="_on_accessibility_button_up"]
 [connection signal="timeout" from="EffectTimer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="AutoExitTimer" to="." method="_on_auto_exit_timer_timeout"]

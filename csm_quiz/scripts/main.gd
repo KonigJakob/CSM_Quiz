@@ -34,3 +34,7 @@ func _on_auto_exit_timer_timeout() -> void:
 		QuestionsLoader.reset_questions()
 		quiz_started = false
 	pass
+
+func _on_accessibility_button_up() -> void:
+	EventManager.enable_crt()
+	EventManager.enable_dithering()

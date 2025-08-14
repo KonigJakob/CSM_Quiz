@@ -37,3 +37,15 @@ func set_dithering(value) -> void:
 func set_chromatic(value) -> void:
 	flowerwall_chromatic.material.set("shader_parameter/enable_chromatic_aberration", true)
 	flowerwall_chromatic.material.set("shader_parameter/chromatic_aberration_strength", value)
+	
+func enable_crt() -> void:
+	if flowerwall_chromatic.visible == false:
+		flowerwall_chromatic.visible = true
+	else:
+		flowerwall_chromatic.visible = false
+	
+func enable_dithering() -> void:
+	if flowerwall_dithering.visible == false:
+		flowerwall_dithering.visible = true
+	else:
+		flowerwall_dithering.visible = false
