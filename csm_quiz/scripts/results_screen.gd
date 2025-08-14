@@ -42,6 +42,7 @@ func on_questions_ended() -> void:
 func _on_button_button_up() -> void:
 	EventManager.dither_screen()
 	QuestionsLoader.reset_questions()
+	QuizManager.can_switch_set = true
 	visible = false
 
 func _on_questions_reloaded() -> void:

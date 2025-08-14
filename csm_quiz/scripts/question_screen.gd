@@ -16,7 +16,6 @@ var expanded_answer : String
 var question_number : int
 
 func _ready() -> void:
-	QuizManager.domain_changed.connect(rewrite_question_and_answers)
 	
 	answer_container = $ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer
 	

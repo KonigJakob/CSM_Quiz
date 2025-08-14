@@ -1,22 +1,19 @@
 extends Control
 
-signal start_button_pressed
-
-func _ready() -> void:
-	QuizManager.domain_changed.connect(update_text)
-	
-func update_text() -> void:
-	$ColorRect/Label.text = tr($ColorRect/Label.text)
-	print("Text updated?" + $ColorRect/Label.text)
+signal start_button_pressed	
 
 func _on_button_button_up() -> void:
 	start_button_pressed.emit()
+	QuizManager.can_switch_set = false
 
 func _on_de_button_button_up() -> void:
-	TranslationServer.set_locale("de")
+	QuizManager.set_language("de")
+	QuestionsLoader.reset_questions()
 
 func _on_en_button_button_up() -> void:
-	TranslationServer.set_locale("en")
+	QuizManager.set_language("en")
+	QuestionsLoader.reset_questions()
 
 func _on_fr_button_button_up() -> void:
-	TranslationServer.set_locale("fr")
+	QuizManager.set_language("fr")
+	QuestionsLoader.reset_questions()
