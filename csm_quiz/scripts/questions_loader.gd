@@ -35,6 +35,9 @@ func load_questions() -> Array:
 			loaded_questions.append(_question_screen)
 	else:
 		print("Couldn't load questions.")
+	var max_questions := 8 if QuizManager.current_set == KEY_F3 else 6
+	loaded_questions = loaded_questions.slice(0, max_questions)
+	number_of_questions = loaded_questions.size()
 	loaded_questions.shuffle()
 	return loaded_questions
 	
@@ -46,8 +49,6 @@ func load_question():
 		if error == OK:
 			var saved_data = json.data
 			if typeof(saved_data) == TYPE_DICTIONARY:
-				#print(saved_data) # Prints dictionary
-				number_of_questions = saved_data.size()
 				return(saved_data)
 			else:
 				print("Unexpected data")
@@ -76,4 +77,5 @@ func reset_questions() -> void:
 	for q in question_array:
 		q.queue_free()
 	question_array = load_questions()
+	number_of_questions = question_array.size()
 	questions_reloaded.emit()

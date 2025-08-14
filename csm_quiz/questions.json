@@ -46,5 +46,21 @@
         "answer c": "QUESTION6_C",
         "correct answer": 0,
         "expanded answer": "QUESTION6_E"
+        },
+    "question 7": {
+        "question": "QUESTION7",
+		"answer a": "QUESTION7_A",
+        "answer b": "QUESTION7_B",
+        "answer c": "QUESTION7_C",
+        "correct answer": 0,
+        "expanded answer": "QUESTION7_E"
+        },
+    "question 8": {
+        "question": "QUESTION8",
+		"answer a": "QUESTION8_A",
+        "answer b": "QUESTION8_B",
+        "answer c": "QUESTION8_C",
+        "correct answer": 0,
+        "expanded answer": "QUESTION8_E"
         }
 }

@@ -14,6 +14,7 @@ func on_question_answered(_correct : bool) -> void:
 	pass
 
 func on_questions_ended() -> void:
+	progress_bar.step = progress_bar.max_value / QuestionsLoader.number_of_questions
 	progress_bar.value = progress_bar.min_value
 	visible = false
 	pass
