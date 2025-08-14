@@ -16,6 +16,8 @@ var expanded_answer : String
 var question_number : int
 
 func _ready() -> void:
+	QuizManager.domain_changed.connect(rewrite_question_and_answers)
+	
 	answer_container = $ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer
 	
 	answer_buttons.append($ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA)
@@ -36,11 +38,15 @@ func _ready() -> void:
 func write_question_and_answers() -> void:
 	$ColorRect/VBoxContainer/HBoxContainer2/Question.text = question
 
-	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA.text = answer_a
-	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB.text = answer_b
-	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC.text = answer_c
+	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonA.text = tr(answer_a)
+	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonB.text = tr(answer_b)
+	$ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer/ButtonC.text = tr(answer_c)
 	
 	$ColorRect2/VBoxContainer/RichTextLabel.text = expanded_answer
+
+func rewrite_question_and_answers() -> void:
+	tr($ColorRect/VBoxContainer/HBoxContainer2/Question.text)
+
 
 func update_question_number(q_number : int) -> void:
 	$ColorRect/VBoxContainer/HBoxContainer2/Control/Number.text = str(q_number)

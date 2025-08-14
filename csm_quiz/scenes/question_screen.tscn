@@ -146,7 +146,7 @@ theme_override_font_sizes/font_size = 365
 text = "##"
 vertical_alignment = 1
 
-[node name="Question" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2"]
+[node name="Question" type="Label" parent="ColorRect/VBoxContainer/HBoxContainer2" groups=["texts"]]
 custom_minimum_size = Vector2(655, 200)
 layout_mode = 2
 size_flags_horizontal = 0
@@ -171,7 +171,7 @@ alignment = 1
 custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
 
-[node name="ButtonA" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+[node name="ButtonA" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer" groups=["texts"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -179,7 +179,7 @@ theme_override_font_sizes/font_size = 27
 text = "Answer A"
 autowrap_mode = 3
 
-[node name="ButtonB" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+[node name="ButtonB" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer" groups=["texts"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -187,7 +187,7 @@ theme_override_font_sizes/font_size = 27
 text = "Answer B"
 autowrap_mode = 3
 
-[node name="ButtonC" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer"]
+[node name="ButtonC" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer/Answers_GridContainer" groups=["texts"]]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -222,7 +222,7 @@ offset_bottom = -11.5
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Answer" type="Label" parent="ColorRect2/VBoxContainer"]
+[node name="Answer" type="Label" parent="ColorRect2/VBoxContainer" groups=["texts"]]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_yl5c8")
 theme_override_font_sizes/font_size = 100
@@ -235,7 +235,7 @@ modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 32.5)
 layout_mode = 2
 
-[node name="CorrectAnswer" type="Label" parent="ColorRect2/VBoxContainer"]
+[node name="CorrectAnswer" type="Label" parent="ColorRect2/VBoxContainer" groups=["texts"]]
 custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_yl5c8")
@@ -250,7 +250,7 @@ modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(0, 32.5)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2/VBoxContainer"]
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect2/VBoxContainer" groups=["texts"]]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_font_sizes/bold_italics_font_size = 0
@@ -263,7 +263,7 @@ fit_content = true
 scroll_active = false
 vertical_alignment = 1
 
-[node name="Next_Button" type="Button" parent="ColorRect2"]
+[node name="Next_Button" type="Button" parent="ColorRect2" groups=["texts"]]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5

@@ -2,6 +2,13 @@ extends Control
 
 signal start_button_pressed
 
+func _ready() -> void:
+	QuizManager.domain_changed.connect(update_text)
+	
+func update_text() -> void:
+	$ColorRect/Label.text = tr($ColorRect/Label.text)
+	print("Text updated?" + $ColorRect/Label.text)
+
 func _on_button_button_up() -> void:
 	start_button_pressed.emit()
 

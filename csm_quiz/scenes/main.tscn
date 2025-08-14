@@ -1,9 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://clwygh7oxs6m7"]
+[gd_scene load_steps=14 format=3 uid="uid://clwygh7oxs6m7"]
 
 [ext_resource type="PackedScene" uid="uid://c1bhi5m51nhgu" path="res://scenes/start_screen.tscn" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://jmklyvm3klyd" path="res://scripts/main.gd" id="1_jyhfs"]
 [ext_resource type="PackedScene" uid="uid://c52fdsmd7dpwa" path="res://scenes/results_screen.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://8nykgh40kkre" path="res://scenes/progress_bar.tscn" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://c2o6ehywdugq8" path="res://scripts/quiz_manager.gd" id="5_tbgi4"]
+[ext_resource type="Translation" uid="uid://b2isqcnfyi654" path="res://assets/Translations/translations_a.de.translation" id="6_tefeu"]
+[ext_resource type="Translation" uid="uid://cyjemcsckef7i" path="res://assets/Translations/translations_a.en.translation" id="7_tipki"]
+[ext_resource type="Translation" uid="uid://bghspicygcupb" path="res://assets/Translations/translations_a.fr.translation" id="8_85g3d"]
+[ext_resource type="Translation" uid="uid://bihmji12agxuv" path="res://assets/Translations/translations_b.de.translation" id="9_trceg"]
+[ext_resource type="Translation" uid="uid://cotsa6o2qxqjv" path="res://assets/Translations/translations_b.en.translation" id="10_a8y0u"]
+[ext_resource type="Translation" uid="uid://dtqqg52k7vada" path="res://assets/Translations/translations_b.fr.translation" id="11_jkv2x"]
+[ext_resource type="Translation" uid="uid://dkob8t43j7dyp" path="res://assets/Translations/translations_c.de.translation" id="12_jbj1t"]
+[ext_resource type="Translation" uid="uid://c75pt7r1jrwsq" path="res://assets/Translations/translations_c.fr.translation" id="13_muem4"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -35,7 +44,11 @@ autostart = true
 wait_time = 120.0
 autostart = true
 
-[node name="Node" type="Node" parent="."]
+[node name="QuizManager" type="Node" parent="."]
+script = ExtResource("5_tbgi4")
+set_a = Array[OptimizedTranslation]([ExtResource("6_tefeu"), ExtResource("7_tipki"), ExtResource("8_85g3d")])
+set_b = Array[OptimizedTranslation]([ExtResource("9_trceg"), ExtResource("10_a8y0u"), ExtResource("11_jkv2x")])
+set_c = Array[OptimizedTranslation]([ExtResource("12_jbj1t"), ExtResource("12_jbj1t"), ExtResource("13_muem4")])
 
 [connection signal="start_button_pressed" from="StartScreen" to="." method="_on_start_screen_start_button_pressed"]
 [connection signal="timeout" from="EffectTimer" to="." method="_on_timer_timeout"]

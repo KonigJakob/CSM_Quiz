@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 QuestionsLoader="*res://scripts/questions_loader.gd"
 EventManager="*res://scripts/event_manager.gd"
 flowerwall_crt="*res://addons/flowerwall_postprocess/scenes/flowerwall_pp.tscn"
+QuizManager="*res://scripts/quiz_manager.gd"
 
 [debug]
 
@@ -34,13 +35,17 @@ window/size/viewport_height=768
 
 enabled=PackedStringArray("res://addons/flowerwall_postprocess/plugin.cfg")
 
+[global_group]
+
+texts=""
+
 [gui]
 
 theme/custom_font="uid://dynjhll66nqo4"
 
 [internationalization]
 
-locale/translations=PackedStringArray("res://assets/Translations/translations_c.de.translation", "res://assets/Translations/translations_c.en.translation", "res://assets/Translations/translations_c.fr.translation")
+locale/translations=PackedStringArray("res://assets/Translations/translations.de.translation", "res://assets/Translations/translations.de_GB.translation", "res://assets/Translations/translations.de_US.translation", "res://assets/Translations/translations.en.translation", "res://assets/Translations/translations.en_GB.translation", "res://assets/Translations/translations.en_US.translation", "res://assets/Translations/translations.fr.translation", "res://assets/Translations/translations.fr_GB.translation", "res://assets/Translations/translations.fr_US.translation")
 locale/fallback="de"
 
 [rendering]
