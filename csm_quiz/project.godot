@@ -30,6 +30,9 @@ gdscript/warnings/unused_signal=0
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
+window/size/mode=3
+window/size/borderless=true
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -52,3 +55,4 @@ locale/fallback="de"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true

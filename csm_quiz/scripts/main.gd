@@ -10,12 +10,19 @@ var quiz_started : bool = false
 
 func _ready() -> void:
 	QuestionsLoader.questions_ended.connect(on_questions_ended)
+	EventManager.enable_crt()
 	pass
 
 func _input(event):
 	if event is InputEventMouseButton:
 		auto_exit_timer.start()
 		effect_timer.start()
+		
+func _unhandled_key_input(event: InputEvent) -> void:
+	if event is InputEventKey:
+		if event.pressed and event.keycode == KEY_ESCAPE:
+			get_tree().quit()
+	
 
 func _on_start_screen_start_button_pressed() -> void:
 	QuestionsLoader.load_next_question()
@@ -36,5 +43,6 @@ func _on_auto_exit_timer_timeout() -> void:
 	pass
 
 func _on_accessibility_button_up() -> void:
-	EventManager.enable_crt()
+	#EventManager.enable_crt()
+	$CanvasLayer/ColorRect.visible = !$CanvasLayer/ColorRect.visible
 	EventManager.enable_dithering()
