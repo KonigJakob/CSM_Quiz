@@ -63,13 +63,14 @@ func load_next_question() -> void:
 		EventManager.dither_screen()
 		get_parent().add_child(QuestionsLoader.question_array[QuestionsLoader.next_question])
 		question_array[QuestionsLoader.next_question].update_question_number(next_question +1)
-		if next_question > 0:
+		if next_question > 0 and QuestionsLoader.question_array[QuestionsLoader.next_question-1].is_inside_tree():
 			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		next_question += 1
 	else:
-		get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
-		questions_are_on = false
-		questions_ended.emit()
+		if QuestionsLoader.question_array[QuestionsLoader.next_question-1].is_inside_tree():
+			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
+			questions_are_on = false
+			questions_ended.emit()
 
 func reset_questions() -> void:
 	next_question = 0

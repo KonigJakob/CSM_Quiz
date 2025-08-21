@@ -31,7 +31,6 @@ layer = 10
 visible = false
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
-visible = false
 material = ExtResource("4_o6xl0")
 anchors_preset = 15
 anchor_right = 1.0
