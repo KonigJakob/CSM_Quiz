@@ -68,6 +68,7 @@ func load_next_question() -> void:
 			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		next_question += 1
 	else:
+		await RenderingServer.frame_post_draw
 		get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		questions_are_on = false
 		questions_ended.emit()
