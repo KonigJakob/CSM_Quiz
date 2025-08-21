@@ -61,16 +61,16 @@ func load_next_question() -> void:
 	if next_question < question_array.size():
 		questions_are_on = true
 		EventManager.dither_screen()
+		await RenderingServer.frame_post_draw
 		get_parent().add_child(QuestionsLoader.question_array[QuestionsLoader.next_question])
 		question_array[QuestionsLoader.next_question].update_question_number(next_question +1)
-		if next_question > 0 and QuestionsLoader.question_array[QuestionsLoader.next_question-1].is_inside_tree():
+		if next_question > 0:
 			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
 		next_question += 1
 	else:
-		if QuestionsLoader.question_array[QuestionsLoader.next_question-1].is_inside_tree():
-			get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
-			questions_are_on = false
-			questions_ended.emit()
+		get_parent().remove_child(QuestionsLoader.question_array[QuestionsLoader.next_question-1])
+		questions_are_on = false
+		questions_ended.emit()
 
 func reset_questions() -> void:
 	next_question = 0
