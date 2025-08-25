@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="CSM_Quiz"
+config/description="Quiz app developed for the \"cold war games\" by the Alliiertenmuseum and the Computerspielemuseum. Developed by Jaime Emilio O'Hea Flores. 2025. All right reserved. "
 run/main_scene="uid://clwygh7oxs6m7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/fullsize=false
+boot_splash/image="uid://ffy8m5nt7404"
 config/icon="uid://ci7pqtnvn2lhb"
 
 [autoload]
