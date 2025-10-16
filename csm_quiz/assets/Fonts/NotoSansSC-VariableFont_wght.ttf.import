@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://drlna4jyaa0n1"
-path="res://.godot/imported/Atkinson-Hyperlegible-Bold-102.ttf-104b2bec0f8d7e7c8ee0bfe89582f115.fontdata"
+uid="uid://bg2k74xy0ni2k"
+path="res://.godot/imported/NotoSansSC-VariableFont_wght.ttf-629555af2afc67fdc8d1ef70838b41aa.fontdata"
 
 [deps]
 
-source_file="res://assets/Fonts/Atkinson-Hyperlegible-Bold-102.ttf"
-dest_files=["res://.godot/imported/Atkinson-Hyperlegible-Bold-102.ttf-104b2bec0f8d7e7c8ee0bfe89582f115.fontdata"]
+source_file="res://assets/Fonts/NotoSansSC-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/NotoSansSC-VariableFont_wght.ttf-629555af2afc67fdc8d1ef70838b41aa.fontdata"]
 
 [params]
 

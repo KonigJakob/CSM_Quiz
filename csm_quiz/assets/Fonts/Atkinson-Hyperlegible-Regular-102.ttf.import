@@ -2,7 +2,7 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://dynjhll66nqo4"
+uid="uid://cvcfjl4tckikd"
 path="res://.godot/imported/Atkinson-Hyperlegible-Regular-102.ttf-3aa288f9a49c7a0be2455a5d7ac08400.fontdata"
 
 [deps]
@@ -16,7 +16,7 @@ Rendering=null
 antialiasing=1
 generate_mipmaps=false
 disable_embedded_bitmaps=true
-multichannel_signed_distance_field=false
+multichannel_signed_distance_field=true
 msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
@@ -26,9 +26,9 @@ subpixel_positioning=4
 keep_rounding_remainders=true
 oversampling=0.0
 Fallbacks=null
-fallbacks=[]
+fallbacks=[Resource("res://assets/Fonts/NotoSansSC-VariableFont_wght.ttf")]
 Compress=null
-compress=true
+compress=false
 preload=[]
 language_support={}
 script_support={}
