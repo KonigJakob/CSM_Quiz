@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c52fdsmd7dpwa"]
 
 [ext_resource type="Script" uid="uid://dtost3cc1p538" path="res://scripts/results_screen.gd" id="1_fqf1x"]
-[ext_resource type="FontFile" uid="uid://c1egqkp8ldbgq" path="res://assets/Fonts/Atkinson-Hyperlegible-Bold-102.ttf" id="2_j5vbe"]
+[ext_resource type="FontFile" uid="uid://drlna4jyaa0n1" path="res://assets/Fonts/Atkinson-Hyperlegible-Bold-102.ttf" id="2_j5vbe"]
 
 [node name="ResultsScreen" type="Control"]
 layout_mode = 3

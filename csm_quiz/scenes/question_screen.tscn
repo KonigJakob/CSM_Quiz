@@ -1,9 +1,9 @@
 [gd_scene load_steps=12 format=3 uid="uid://deyrore4ufuqk"]
 
 [ext_resource type="Script" uid="uid://b3ub06ad1nbws" path="res://scripts/question_screen.gd" id="1_tgqhu"]
-[ext_resource type="FontFile" uid="uid://dynjhll66nqo4" path="res://assets/Fonts/Atkinson-Hyperlegible-Regular-102.ttf" id="2_d5co2"]
-[ext_resource type="FontFile" uid="uid://cemsgy0nytphh" path="res://assets/Fonts/Atkinson-Hyperlegible-BoldItalic-102.ttf" id="3_ufqmp"]
-[ext_resource type="FontFile" uid="uid://c1egqkp8ldbgq" path="res://assets/Fonts/Atkinson-Hyperlegible-Bold-102.ttf" id="4_yl5c8"]
+[ext_resource type="FontFile" uid="uid://cvcfjl4tckikd" path="res://assets/Fonts/Atkinson-Hyperlegible-Regular-102.ttf" id="2_d5co2"]
+[ext_resource type="FontFile" uid="uid://bsvmp2vks3sgv" path="res://assets/Fonts/Atkinson-Hyperlegible-BoldItalic-102.ttf" id="3_ufqmp"]
+[ext_resource type="FontFile" uid="uid://drlna4jyaa0n1" path="res://assets/Fonts/Atkinson-Hyperlegible-Bold-102.ttf" id="4_yl5c8"]
 
 [sub_resource type="Theme" id="Theme_ynd44"]
 Button/fonts/font = ExtResource("2_d5co2")
